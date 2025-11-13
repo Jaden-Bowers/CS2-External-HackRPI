@@ -1,0 +1,16 @@
+﻿  visuals.cpp
+  hooks.cpp
+  main.cpp
+  c_menu.cpp
+  c_renderer.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx11.cpp
+  imgui_impl_win32.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  Generating Code...
+  external-sdk.vcxproj -> C:\Users\jaden\OneDrive\Desktop\Code_Projects\cs2\cs2-external-base-main\x64\Debug\external-sdk.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

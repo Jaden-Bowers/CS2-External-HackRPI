@@ -1,0 +1,5 @@
+// Файлы указаний помогают среде IDE Visual Studio интерпретировать идентификаторы Visual C++
+// (например, имена функций и макросов).
+// Дополнительные сведения: https://go.microsoft.com/fwlink/?linkid=865984
+#define ADD_FIELD(type, name, addr) type name() { return memory->read<type>(addr); }
+#define ADD_CLASS(type, name, addr) __forceinline type name() { return type(memory->read<uintptr_t>(addr)); }
