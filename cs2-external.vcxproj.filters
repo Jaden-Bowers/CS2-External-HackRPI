@@ -60,6 +60,9 @@
     <ClCompile Include="src\features\trigger_bot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\features\aim_bot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\features\head_overlay.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -105,6 +108,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\features\trigger_bot.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\aim_bot.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\features\head_overlay.hpp">

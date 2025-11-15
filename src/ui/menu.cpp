@@ -49,6 +49,19 @@ void Menu::draw() {
         }
     }
 
+    const bool previous_aimbot = m_aimbot_enabled;
+    if (ImGui::Checkbox("Aimbot", &m_aimbot_enabled) && previous_aimbot != m_aimbot_enabled) {
+        Log::instance().push(m_aimbot_enabled ? "Aimbot enabled" : "Aimbot disabled");
+    }
+
+    float previous_fov = m_aimbot_fov;
+    if (ImGui::SliderFloat("Aimbot FOV (px)", &m_aimbot_fov, 10.f, 200.f, "%.0f px")) {
+        m_aimbot_fov = std::clamp(m_aimbot_fov, 10.f, 200.f);
+        if (fabsf(previous_fov - m_aimbot_fov) > FLT_EPSILON) {
+            Log::instance().push(std::string("Aimbot FOV set to ") + std::to_string(m_aimbot_fov) + "px");
+        }
+    }
+
     const bool previous_draw_heads = m_draw_heads_enabled;
     if (ImGui::Checkbox("Draw Heads", &m_draw_heads_enabled) && previous_draw_heads != m_draw_heads_enabled) {
         Log::instance().push(m_draw_heads_enabled ? "Head circles enabled" : "Head circles disabled");

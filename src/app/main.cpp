@@ -4,6 +4,7 @@
 #include "../features/esp.hpp"
 #include "../features/trigger_bot.hpp"
 #include "../features/head_overlay.hpp"
+#include "../features/aim_bot.hpp"
 #include "../platform/d3d11_device.hpp"
 #include "../platform/imgui_layer.hpp"
 #include "../platform/win32_window.hpp"
@@ -85,12 +86,18 @@ int APIENTRY wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int) {
 
         g_esp.run(menu.esp_enabled());
         g_head_overlay.run(menu.draw_heads_enabled());
+        g_aimbot.run(menu.aimbot_enabled(), menu.aimbot_fov());
         g_trigger_bot.update(menu.trigger_bot_enabled(), menu.trigger_bot_delay());
 
+        const ImVec2 display = overlay_draw::DisplaySize();
+        const ImVec2 center(display.x * 0.5f, display.y * 0.5f);
+
         if (menu.crosshair_enabled()) {
-            const ImVec2 display = overlay_draw::DisplaySize();
-            const ImVec2 center(display.x * 0.5f, display.y * 0.5f);
             overlay_draw::AddDot(center, 2.0f, IM_COL32(255, 50, 50, 255));
+        }
+
+        if (menu.aimbot_enabled()) {
+            overlay_draw::AddCircle(center, menu.aimbot_fov(), IM_COL32(255, 50, 50, 100), 1.5f);
         }
         menu.draw();
 

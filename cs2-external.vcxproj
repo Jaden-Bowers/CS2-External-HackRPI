@@ -142,6 +142,7 @@
     <ClCompile Include="external\imgui\imgui_tables.cpp" />
     <ClCompile Include="external\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\features\trigger_bot.cpp" />
+    <ClCompile Include="src\features\aim_bot.cpp" />
     <ClCompile Include="src\app\main.cpp" />
     <ClCompile Include="src\core\log.cpp" />
     <ClCompile Include="src\features\esp.cpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="src\core\log.hpp" />
     <ClInclude Include="src\core\math.hpp" />
     <ClInclude Include="src\features\trigger_bot.hpp" />
+    <ClInclude Include="src\features\aim_bot.hpp" />
     <ClInclude Include="src\features\esp.hpp" />
     <ClInclude Include="src\platform\d3d11_device.hpp" />
     <ClInclude Include="src\platform\imgui_layer.hpp" />
